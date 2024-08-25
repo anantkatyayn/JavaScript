@@ -28,9 +28,9 @@ const holaObj = {
 // const cmbnObj = Object.assign({},newObj, holaObj)            //another way of concatenating two  objs
 const cmbnObj = {...newObj,...holaObj}
 // console.log(cmbnObj);
+console.log(cmbnObj.hasOwnProperty('DOB'))
 
-
-// DESTRUCTURING AN OBJECT
+// DESTRUCTURING AN OBJECT **This helps in shortening regular syntax of logging sny particular key of an object**
 
 //SYNTAX : 
 // const {key : alias} = objectName;
