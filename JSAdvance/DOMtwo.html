@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #ffffff;">
+    <div class = "parent">
+        <div class="day" id="mon">Monday</div>
+        <div class="day" id="tue">Tuesday</div>
+        <div class="day" id="wed">Wednesday</div>
+        <div class="day" id="thu">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children) //returns an HTML collection
+    // console.log(parent.children[1]) //returns a div element with it's class and id
+    // console.log(parent.children[1].innerText)
+    
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     console.log(parent.children[index]);
+    // }
+
+    // parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+    
+    // const child = document.querySelector('.day')
+    // console.log(child);
+    // console.log(child.nextElementSibling)
+    // console.log(child.nextSibling)
+    // console.log(child.parentElement)
+
+    console.log("Nodes:", parent.childNodes) //returnes nodeList, with all nodes such as text, div etc. Discussed at 1:15:00 in Chai Aur Code one shot JS part 2.
+</script>
+</html>
