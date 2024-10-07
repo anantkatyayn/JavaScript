@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #ffffff;">
+    <ul class="Languages">
+        <li class="JS"> JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Method 1: bit unoptimized, coz .innerHTML method traverses whole DOM tree everytime which is not recommended for bigger projects
+    // function addLang(langName){
+    //     const listItem = document.createElement('li')
+    //     listItem.innerHTML = `${langName}`
+    //     listItem.className = `${langName}`.slice(0,1);
+    //     document.querySelector(".Languages").appendChild(listItem)
+    // }
+    // addLang("Java")
+    // addLang("Python")
+    
+
+    // Method 2: using appendChild(TextNode) approach
+    function addLanguageOptimized(langName){
+        const listItem = document.createElement('li')
+        listItem.appendChild(document.createTextNode(langName))
+        document.querySelector(".Languages").appendChild(listItem)
+    }
+    addLanguageOptimized("Java")
+    addLanguageOptimized("GoLang")
+    addLanguageOptimized("Python")
+
+    // To edit
+    const secLang = document.querySelector("li:nth-child(2)")
+    // secLang.textContent = "MoJo"
+    const newli = document.createElement('li')
+    newli.innerHTML= 'MoJo'
+    secLang.replaceWith(newli)
+
+</Script>
+</html>
