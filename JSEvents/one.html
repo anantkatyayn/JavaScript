@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events Practice </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div>
+        <ul id="images">
+            <li> <img src="https://imgs.search.brave.com/N9JZEJeJBrigCKbofR3pylZ52TkjnDAVNBf0qx7niKs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2Fkb2Jl/LXBob3Rvc2hvcC1j/YzMxMzEuanBn" width ="200px" alt="photoshop" id="photoshop"></li>
+            <li> <img src="https://imgs.search.brave.com/4vl5tJUSXv5im-aW7P1awjaebO15pMUZ4LviS8hzspk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9YSGV0YWF2/LmpwZw" width="200px" alt="wolf" id="wolf"></li>
+            <li> <img src="https://imgs.search.brave.com/tsALEwF4RosWlFMH7dMkpJQzTt9diH9FRuMzncqQQaQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQz/NjExMjUzMC9waG90/by9pbmRpYW4tcGFz/c3BvcnQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTRjbGs2/Z3Z2THlnQzJCaEdJ/Y0kzTVV2TEw2R2lm/blhteVAyd0UyZnQ3/ckk9" width="200px" alt="passport" id="passport"></li>
+            <li> <img src="https://imgs.search.brave.com/utn_xIrf5k-XUbXqh7_3FisXrzcDE7jMfIIT2PX2Rp4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iZC5n/YWFkaWNkbi5jb20v/cHJvY2Vzc2VkaW1h/Z2VzL3RyaXVtcGgv/dHJpdW1waC10aWdl/ci80OTRYMzAwL21f/dGlnZXItODAwXzEx/NTQwMjg0NDQ2Lmpw/Zz9pbXdpZHRoPTQw/MCZpbXBvbGljeT1y/ZXNpemU" alt="Bike" width="200px" id="bike"></li>
+            <li> <a style="color: beige;" href="https://pokedexv1anant.netlify.app/">My Pokedex Project</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // This methos is not used because it doesn't provide functionalities as addEventListener does
+    // document.getElementById('wolf').onclick = function(){
+    //     alert('Wolf clicked')
+    // }
+
+    // document.getElementById('wolf').addEventListener('click', function(e){
+        // console.log("Wolf is clicked")
+        // e.stopPropagation() ***this method is use to stop bubbling of event, means it will execute and won't go on upper event, such as image clicked one.***
+        // alert('Wolf is clicked again')
+    // }, false)
+    // document.getElementById('images').addEventListener('click', function(e){
+        // console.log("image is clicked")
+        // alert('Wolf is clicked again')
+    // }, false)
+
+    //*** The third parameter in addEventListener is for handling event propogation
+    // True means capturing - up to down
+    // false which is also the default value - down to up also called bubbling***
+
+
+    //***To remove an element***
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.parentNode)
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()
+    // }, false)
+</script>
+</html>
