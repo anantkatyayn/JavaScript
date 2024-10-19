@@ -8,8 +8,22 @@
 <body>
     <h1>Anant Katyayn</h1>
     <button id="stop">STOP</button>
+    <button id="reset">RESET</button>
 </body>
 <script>
-    
+    const changeHead = function() {
+        document.querySelector('h1').innerHTML = "It's me Anant"
+    }
+    const changeMe = setTimeout(changeHead, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        document.querySelector('h1').innerHTML = "Stopped the change"
+    })
+
+    document.querySelector('#reset').addEventListener('click', function() {
+        document.querySelector('h1').innerHTML = 'Anant Katyayn'
+    })
+
 </script>
 </html>

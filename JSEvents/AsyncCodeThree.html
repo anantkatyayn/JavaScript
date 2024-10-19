@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Practicing Async in JS with set timeout, set interval and clear timeout, clear interval</title>
+    <style>
+        .go{
+            color: green;
+        }
+        .stop{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anant Katyayn</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const changeHead = function(){
+        document.querySelector('h1').innerHTML = "It's me Anant Katyayn"
+        console.log("hi")
+    }
+    
+    let intervalID
+
+    const startChange = document.querySelector('#start').addEventListener('click', function(){
+        intervalID = setInterval(changeHead ,1000)
+    })
+
+    const stopChange = document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalID)
+        console.log("stopped")
+    })
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Practicing Async in JS with set timeout, set interval and clear timeout, clear interval</title>
+    <style>
+        .go{
+            color: green;
+        }
+        .stop{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anant Katyayn</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    let intervalID
+
+    function changeColor(){
+        if(!intervalID){
+            intervalID = setInterval(flashText, 1000)
+        }
+    }
+
+    function flashText(){
+        const element = document.querySelector('h1')
+        element.className = element.className === "go"? "stop":"go"
+    }
+
+    function stopTextColor(){
+        clearInterval(intervalID)
+        intervalID = null
+    }
+
+    document.querySelector('#start').addEventListener('click', changeColor)
+    document.querySelector('#stop').addEventListener('click', stopTextColor)
+</script>
+</html>
