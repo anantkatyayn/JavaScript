@@ -20,20 +20,22 @@
 </body>
 <script>
     const changeHead = function(){
-        document.querySelector('h1').innerHTML = "It's me Anant Katyayn"
-        console.log("hi")
+        document.querySelector('h1').innerHTML = "It's changed now"
+        console.log("hello")
     }
-    
+
     let intervalID
 
-    const startChange = document.querySelector('#start').addEventListener('click', function(){
-        intervalID = setInterval(changeHead ,1000)
+    document.getElementById('start').addEventListener('click', ()=>{
+        intervalID = setInterval(changeHead, 1000)
+        
     })
 
-    const stopChange = document.querySelector('#stop').addEventListener('click', function(){
+    document.getElementById('stop').addEventListener('click', ()=>{
         clearInterval(intervalID)
         console.log("stopped")
     })
+    
 
 </script>
 </html>
