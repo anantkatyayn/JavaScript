@@ -29,8 +29,9 @@
             document.body.style.backgroundColor = randomColour()
             console.log(randomColour())
         }
+        if(!intervalID){
         intervalID = setInterval(ChngBGColor, 1000)
-
+        }
     }
 
     const stopChangingColor = function () {
