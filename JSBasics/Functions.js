@@ -29,4 +29,44 @@ function useRest(...num){
     return num
 }
 
-console.log(useRest(400,500,7000,400,520))
+// console.log(useRest(400,500,7000,400,520))
+
+
+
+
+
+
+// function declarations
+
+// function hello(user){
+//     const username ="Ayush" 
+//     console.log(`hello ${username}`)
+// }
+// hello('anant')
+
+//second way
+
+// const helloTwo = function(){
+//     console.log("hello Two")
+// }
+// helloTwo()
+
+
+// Third way - arrow function
+
+//  helloArrow = ()=>{
+//     console.log("Hello Arrow functions")
+// }
+// helloArrow()
+
+// fourth way - Immediately invoked function expressions (IIFE)
+// named IIFE
+( function helloIife(){
+    console.log(`Hello IIFE`);
+} )();
+
+// Unnamed IIFE
+
+((user)=>{
+    console.log(`unnamed IIFE created by ${user}`)
+})("anant");
