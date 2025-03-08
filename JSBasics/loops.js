@@ -20,15 +20,29 @@
 // } while (condition);
 
 
-const arr = ["Batman", "Superman", "Flash", "GreenLantern"]
-//for-of loop syntax:
-for (const element of arr) {
-    // console.log(element);
+// const arr = ["Batman", "Superman", "Flash", "GreenLantern"]
+// //for-of loop syntax:
+// for (const element of arr) {
+//     // console.log(element);
     
-}
+// }
 
-let str = "Hola Amigo"
-// console.log(str.split(""))
-for (const element of str) {
+// let str = "Hola Amigo"
+// // console.log(str.split(""))
+// for (const element of str) {
     
+// }
+
+
+
+
+//Table using normal for loop
+
+
+for(let i = 1; i<=10;i++){
+    console.log(" ")
+    console.log(`Table of ${i}`)
+    for(let j=1; j<=10;j++){
+        console.log(`${i} * ${j} = ${i*j}`)
+    }
 }
